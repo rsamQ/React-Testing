@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MenuItems } from './MenuItems'
 import './Navbar.css'
 
-class Navbar extends Component {
+export default class Navbar extends Component {
     state = { clicked: false }
 
     handleClick = () => {
@@ -32,5 +32,3 @@ class Navbar extends Component {
         )
     }
 }
-
-export default Navbar

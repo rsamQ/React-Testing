@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { CvItems } from './CvItems'
+import { CvItems } from './CvItems';
+import './Cv.css';
 
-class Cv extends Component {
+export default class Cv extends Component {
     render(){
         return (
-            <div>
-                <ul>
+            <div id="timeline-content">
+                <h1>Lebenslauf</h1>
+                <ul className="timeline">
                     {CvItems.map((item, index) =>{
                         return(
-                            <li key={index} className={index % 2 === 0 ? item.styleLeft : item.styleRight}>
-                            <h1>{item.title}</h1>
+                            <li key={index} className={item.style} data-date={item.date}>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
                         </li>
                         )
                     })}
@@ -18,5 +21,3 @@ class Cv extends Component {
         )
     }
 }
-
-export default Cv

@@ -1,26 +1,26 @@
 export const CvItems = [
     {
         title: 'bbb',
-        date: '',
-        description: '',
-        style: ''
+        date: '123',
+        description: '123',
+        style: 'event'
     },
     {
         title: 'bbb',
-        date: '',
-        description: '',
-        style: ''
+        date: '123',
+        description: '123',
+        style: 'event'
     },
     {
         title: 'bbb',
-        date: '',
-        description: '',
-        style: ''
+        date: '123',
+        description: '123',
+        style: 'event'
     },
     {
         title: 'bbb',
-        date: '',
-        description: '',
-        style: ''
+        date: '123',
+        description: '123',
+        style: 'event'
     }
 ]
