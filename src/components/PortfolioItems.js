@@ -1,14 +1,14 @@
 export const PortfolioItems = [
     {
         title: 'blub',
-        description: 'blub'
+        image: 'images/changes.jpg'
     },
     {
         title: 'blub',
-        description: 'blub'
+        image: 'images/changes.jpg'
     },
     {
         title: 'blub',
-        description: 'blub'
+        image: 'images/changes.jpg'
     }
 ]
