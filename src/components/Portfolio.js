@@ -5,17 +5,45 @@ import './Portfolio.css';
 export default class Portfolio extends Component {
     render() {
         return (
-            <div className="portfolio">
-                {PortfolioItems.map((item, index) =>{
-                    return(
-                        <div key={index} className="image">
-                            <img src={item.image} alt="placeholder" className=""/>
-                            <div className="overlay">
-                                <a className="portfolio-title">{item.title}</a>
-                            </div>
+            <div /*class="portfolio"*/>
+                <div className="portfolio">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/img_avatar.png" alt="Avatar"/>
                         </div>
-                    )
-                })}
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>Architect und Engineer</p>
+                            <p>We love that guy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/img_avatar.png" alt="Avatar" />
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>Architect und Engineer</p>
+                            <p>We love that guy</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/img_avatar.png" alt="Avatar"/>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>Architect und Engineer</p>
+                            <p>We love that guy</p>
+                        </div>
+                    </div>
+                </div>  
+                </div>
             </div>
         )
     }

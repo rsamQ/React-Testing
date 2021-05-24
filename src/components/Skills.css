@@ -1,0 +1,19 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 350px;
+  margin-left: -200px;
+}
+
+.radial {
+  position: absolute;
+  list-style: none;
+  width: 20%;
+  text-align: center;
+}
+
+.radial-list {
+  position: relative;
+}
