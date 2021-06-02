@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { CvItems } from './CvItems';
-import './Cv.css';
 
 export default class Cv extends Component {
     render(){
