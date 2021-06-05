@@ -9,16 +9,48 @@
   --secondary-color: #fb592d;
 }
 
-/** About **/
-
-/** CV **/
-
 /* Base */
 body {
   background: var(--primary-color);
   font-size: 16px;
   font-family: "Montserrat";
 }
+
+/** Typewriter **/
+.typewriter {
+  display: table;
+  margin: 0 auto;
+}
+
+.typewriter h1 {
+  font-size: 40px;
+  overflow: hidden;
+  border-right: 0.15em solid transparent;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  animation: typing 1.75s steps(15, end), blink-caret 0.75s step-end 5;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-right: 0.15em solid orange;
+  }
+}
+
+/** About **/
 
 /** Navbar **/
 
@@ -36,6 +68,7 @@ body {
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
+  font-size: 3rem;
 }
 
 .fa-rect {
@@ -55,19 +88,19 @@ body {
   margin-right: 2rem;
 }
 
-.navbar-link a {
-  text-decoration: none;
+.navbar-link {
   font-weight: 600;
-  color: var(--primary-color);
   background-color: #fff;
   padding: 0.5rem 1rem;
 }
 
 a.nav-links {
   position: relative;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
-a.nav-links:before {
+a.nav-links::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -80,13 +113,14 @@ a.nav-links:before {
   transition: all 0.3s ease-in-out;
 }
 
-a.nav-links:hover:before {
+a.nav-links:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
 
 .fa-bars {
-  color: #fff;
+  color: var(--primary-color);
+  font-size: 2rem;
 }
 
 .nav-links-mobile {
@@ -106,41 +140,50 @@ a.nav-links:hover:before {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: -100%;
     opacity: 1;
     transition: all 0.5 ease;
   }
 
   .nav-menu.active {
-    background: #fff;
+    background: var(--secondary-color);
     left: 0;
     opacity: 1;
     transition: all 0.5 ease;
     z-index: 1;
-  }
-
-  .nav-links {
-    text-align: center;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    width: 100%;
     display: table;
+    width: 100vw;
+    padding: 0;
   }
 
-  .nav-links:hover {
+  .nav-menu.active a.nav-links {
+    display: block;
+    text-align: center;
+    margin: 0 5px;
+  }
+
+  .nav-menu.active a.nav-links:hover {
+    color: #fff;
     background-color: var(--primary-color);
-    border-radius: 0;
+  }
+
+  a.nav-links::before {
+    visibility: hidden;
+  }
+
+  a.nav-links:hover::before {
+    visibility: hidden;
   }
 
   .navbar-logo {
     position: absolute;
-    top: 0;
     left: 0;
     color: var(--primary-color);
     transform: translate(25%, 50%);
+    font-size: 3rem;
+    margin-bottom: 5rem;
   }
 
   .menu-icon {
@@ -149,49 +192,18 @@ a.nav-links:hover:before {
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin: 0.25rem 2rem 0.5rem 0.5rem;
     cursor: pointer;
     color: var(--primary-color);
   }
 
   .fa-times {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
-/*a {
-  color: var(--primary-color);
-  text-decoration: none;
-  text-transform: uppercase;
-  display: block;
-  letter-spacing: 0.3em;
-  font-size: 0.6em;
-  font-weight: 400;
-  background: var(--primary-color);
-  padding: 0.3rem 1rem;
-  margin: 1.9rem 0 0 0;
-  float: right;
-}
-a:hover {
-  color: #fff;
-  background: var(--primary-color);
-  border-bottom: 0.35em solid var(--primary-color);
-}
-strong {
-  font-weight: 600;
-}
-h1 {
-  font-family: "Montserrat";
-  letter-spacing: 1.5px;
-  color: white;
-  font-weight: 400;
-  font-size: 2.4em;
-}
-#timeline-content {
-  margin-top: 50px;
-  text-align: center;
-}*/
 /* Timeline */
 .timeline {
   border-left: 4px solid #004ffc;
@@ -265,9 +277,6 @@ h1 {
 /** Portfolio **/
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-body {
-  font-family: Arial, Helvetica;
-}
 
 .portfolio {
   display: flex;
