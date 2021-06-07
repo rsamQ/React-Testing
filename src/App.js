@@ -5,12 +5,13 @@ import Cv from './components/Cv';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import ProgressBar from './components/ProgressBar';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Skills />
+      <ProgressBar />
       <Portfolio />
       <Contact />
     </div>

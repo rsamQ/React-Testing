@@ -349,18 +349,17 @@ a.nav-links:hover::before {
   height: 700px;
 }
 
-.radial {
+li .radial {
   position: absolute;
-  list-style: none;
   text-align: center;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  border: 3px solid var(--primary-color);
+  height: 100px;
+  width: 100px;
 }
 
 .radial-list {
   position: relative;
+  list-style: none;
 }
 
 /** Contact **/
